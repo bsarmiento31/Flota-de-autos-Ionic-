@@ -1,0 +1,30 @@
+
+    <ion-content fullscreen padding scroll-y="false">
+      <ion-slides [options]="slideOpts" #mySlider>
+
+       
+
+        <ion-slide>  
+          <img src="assets/imgs/taxi-logo.png"/>
+          <h2>Ingrese su código</h2>
+          <p>Debe de ingresar su código de usuario</p>
+          <ion-button expand="full" (click)="mostrarInput()">Ingresar</ion-button>
+
+        </ion-slide>
+
+        <ion-slide>
+          <img src="assets/imgs/check.jpg"/>
+          <h2>¿Listo para empezar?</h2>
+          <ion-button fill="clear" (click)="ingresar()">Continuar <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+      
+
+      </ion-slides>
+    </ion-content>
+ 
+
+  
+
+
+

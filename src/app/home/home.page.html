@@ -1,14 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      {{ user.nombre }} 
     </ion-title>
+    <ion-button color="primary" (click)="salir()">Salir</ion-button>
   </ion-toolbar>
-</ion-header>
-
+</ion-header> 
+ 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <!-- <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>  -->
+  <!-- <div id="map_canvas">
+    <ion-button ion-button (click)="onButtonClick()">Demo</ion-button>
+  </div> -->
+  <agm-map [style.height.px]="height" [latitude]="user.lat" [longitude]="user.lng" [zoom]="16">
+     <agm-marker [latitude]="user.lat" [longitude]="user.lng"></agm-marker>
+  </agm-map>
+ 
 </ion-content>
+ 

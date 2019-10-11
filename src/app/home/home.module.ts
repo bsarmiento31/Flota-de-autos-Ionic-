@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [
@@ -16,7 +17,10 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAsRF73gl8u5aXmOCkJCfK5RbWBbvY6zKE'
+    })
   ],
   declarations: [HomePage]
 })
